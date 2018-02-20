@@ -8,6 +8,7 @@ MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_
 MERGED from [:react-native-vector-icons] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/AndroidManifest.xml:17:1-27:12
+MERGED from [:react-native-linear-gradient] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.4.0.aar/7f0c1398d25520dfe6bc905c52324ef7/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-23.4.0.aar/993a05f1028001a3b9634979a5edfc6f/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-v4:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/support-v4-23.4.0.aar/d1f073e638e5028679afcbaeb55e4179/AndroidManifest.xml:17:1-24:12
@@ -59,6 +60,8 @@ MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches
 MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/AndroidManifest.xml:21:5-23:78
+MERGED from [:react-native-linear-gradient] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.4.0.aar/7f0c1398d25520dfe6bc905c52324ef7/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-23.4.0.aar/7f0c1398d25520dfe6bc905c52324ef7/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-23.4.0.aar/993a05f1028001a3b9634979a5edfc6f/AndroidManifest.xml:5:5-43
