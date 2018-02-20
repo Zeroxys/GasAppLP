@@ -1,17 +1,29 @@
 import React from 'react'
-import {View, StyleSheet} from 'react-native'
+import {StyleSheet} from 'react-native'
+import {View, Text} from 'react-native-animatable'
+
 import ButtonRegister from '../../components/UI/Button'
 
 const Opening = () => {
   return (
     <View style={styles.container}>
-      <ButtonRegister
-          color='#3b5998'
-          name="INGRESAR"/>
+      <View animation={'zoomIn'} delay={3600} duration={400}>
+        <ButtonRegister
+            color='#3b5998'
+            name="INGRESAR"/>
+      </View>
 
-      <ButtonRegister
-        color='#5A8DFE'
-        name="REGISTRAR"/>
+      <View style={styles.separatorContainer} animation={'zoomIn'} delay={3800} duration={400}>
+        <View style={styles.separatorLine} />
+        <Text style={styles.separatorOr}>{'Ó'}</Text>
+        <View style={styles.separatorLine} />
+      </View>
+
+      <View animation={'zoomIn'} delay={4000} duration={400}>
+        <ButtonRegister
+          color='#5A8DFE'
+          name="REGISTRAR"/>
+      </View>
     </View>
   )
 }
@@ -22,7 +34,25 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     width : '70%',
     height : 100
-  }
+  },
+
+  separatorContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginVertical: 20
+  },
+
+  separatorLine: {
+    flex: 1,
+    borderWidth: StyleSheet.hairlineWidth,
+    height: StyleSheet.hairlineWidth,
+    borderColor: '#9B9FA4'
+  },
+
+  separatorOr: {
+    color: '#9B9FA4',
+    marginHorizontal: 8
+  },
 });
 
 export default Opening
