@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
 import { StyleSheet,
-  Text, 
-  View, 
-  TouchableOpacity, 
-  Button,
+  View,
   StatusBar } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
 import Icons from 'react-native-vector-icons/Ionicons'
 import LinearGradient from 'react-native-linear-gradient';
 
-import ButtonRegister from '../../components/UI/Button'
+import Opening from './opening'
 
 class AuthScreen extends Component {
 
@@ -20,28 +17,21 @@ class AuthScreen extends Component {
   }
 
   render() {
+
     return (
       <LinearGradient colors={['#4fc3f7', '#3b5998', '#192f6a']} style={styles.linearGradient}>
         <StatusBar
           backgroundColor="blue"
           barStyle="light-content"
           translucent={true}
-          backgroundColor="rgba(255, 255, 255, 0)"/>
+          backgroundColor="rgba(0, 0, 0, 0.20)"/>
 
         <View style={styles.content}>
     
           <Icons name="md-flame" size={180} color="#ff8a80"/>
-    
-          <View style={styles.container}>
-            <ButtonRegister
-                color='#3b5998'
-                name="INGRESAR"/>
 
-            <ButtonRegister
-              color='#5A8DFE'
-              name="REGISTRAR"/>
+          <Opening/>
 
-          </View>
         </View>
       </LinearGradient>
     )
@@ -60,13 +50,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 15,
     paddingRight: 15,
-  },
-
-  container : {
-    flex: 0,
-    justifyContent: 'space-around',
-    width : '70%',
-    height : 100
   }
 });
 
