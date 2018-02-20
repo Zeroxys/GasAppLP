@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Feb 19 19:46:07 CST 2018
+#Mon Feb 19 20:11:49 CST 2018
 17.baseType=DIRECTORY
 4.path=lib/x86/libglog_init.so
 25.base=/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/transforms/stripDebugSymbol/debug/0

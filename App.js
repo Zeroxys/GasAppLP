@@ -1,7 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import SplashScreen from 'react-native-splash-screen'
 
 export default class App extends React.Component {
+
+  componentDidMount () {
+    setTimeout( () => {
+      SplashScreen.hide()
+    },3000)
+  }
+
   render() {
     return (
       <View style={styles.container}>
