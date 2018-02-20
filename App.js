@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
+import Icons from 'react-native-vector-icons/Ionicons'
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   componentDidMount () {
     setTimeout( () => {
@@ -12,20 +13,42 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      <View style={styles.content}>
+  
+        <Icons name="md-flame" size={180} color="#ff8a80"/>
+  
+        <View style={styles.container}>
+          <TouchableOpacity>
+            <Button
+              title ='Ingresar' 
+              color = '#3b5998'/>
+          </TouchableOpacity>
+  
+          <TouchableOpacity>
+            <Button
+              title ='Registrar' 
+              color = '#5A8DFE'/>
+          </TouchableOpacity>
+        </View>
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  content : {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems:'center',
+    width : '100%'
   },
+
+  container : {
+    flex: 0,
+    justifyContent: 'space-around',
+    width : '70%',
+    height : 100
+  }
 });
+
+export default App
