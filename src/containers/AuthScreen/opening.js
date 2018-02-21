@@ -4,25 +4,27 @@ import {View, Text} from 'react-native-animatable'
 
 import ButtonRegister from '../../components/UI/Button'
 
-const Opening = () => {
+const Opening = (props) => {
   return (
     <View style={styles.container}>
-      <View animation={'zoomIn'} delay={3600} duration={400}>
+      <View animation={'zoomIn'} delay={3800} duration={400}>
         <ButtonRegister
             color='#3b5998'
-            name="INGRESAR"/>
+            name="INGRESAR"
+            onPress={() => props.onSignInPress()}/>
       </View>
 
-      <View style={styles.separatorContainer} animation={'zoomIn'} delay={3800} duration={400}>
+      <View style={styles.separatorContainer} animation={'zoomIn'} delay={4000} duration={400}>
         <View style={styles.separatorLine} />
         <Text style={styles.separatorOr}>{'Ó'}</Text>
         <View style={styles.separatorLine} />
       </View>
 
-      <View animation={'zoomIn'} delay={4000} duration={400}>
+      <View animation={'zoomIn'} delay={4200} duration={400}>
         <ButtonRegister
           color='#5A8DFE'
-          name="REGISTRAR"/>
+          name="REGISTRAR"
+          onPress={() => props.onCreateAccountPress()}/>
       </View>
     </View>
   )
@@ -30,8 +32,8 @@ const Opening = () => {
 
 const styles = StyleSheet.create({
   container : {
-    flex: 0,
-    justifyContent: 'space-around',
+    flex: 1,
+    top : '10%',
     width : '70%',
     height : 100
   },

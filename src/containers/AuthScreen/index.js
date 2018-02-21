@@ -1,19 +1,32 @@
 import React, {Component} from 'react';
-import { StyleSheet,
-  View,
-  StatusBar } from 'react-native';
-import SplashScreen from 'react-native-splash-screen'
+import { StyleSheet, View, StatusBar, Dimensions } from 'react-native'
 import Icons from 'react-native-vector-icons/Ionicons'
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from 'react-native-linear-gradient'
+import {Image} from 'react-native-animatable'
 
+import LogoImg from '../../assets/gas.png'
 import Opening from './opening'
+
+const {width, height} = Dimensions.get('window')
 
 class AuthScreen extends Component {
 
-  componentDidMount () {
-    setTimeout( () => {
-      SplashScreen.hide()
-    },3000)
+  state = {
+    visibleForm : null
+  }
+
+  componentWillUpdate (nextProps) {
+    if(!this.props.isLoggedIn && nextProps.isLoggedIn) {
+      this._hideAuthScreen()
+    }
+  }
+
+  _hideAuthScreen = async () => {
+    console.warn('looool escondiendome')
+  }
+
+  _setVisibleForm = async (visibleForm) => {
+    console.warn(visibleForm)
   }
 
   render() {
@@ -27,10 +40,21 @@ class AuthScreen extends Component {
           backgroundColor="rgba(0, 0, 0, 0.20)"/>
 
         <View style={styles.content}>
-    
-          <Icons name="md-flame" size={180} color="#ff8a80"/>
+          
+          <Image
+            animation={'bounceIn'}
+            duration={900}
+            delay={2700}
+            style={styles.LogoImg}
+            source={LogoImg}/>
 
-          <Opening/>
+          {(!this.state.visibleForm && !this.props.isLoggedIn) && (
+            <Opening
+              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+              onSignInPress={() => this._setVisibleForm('LOGIN')}
+            />
+          )}
+
 
         </View>
       </LinearGradient>
@@ -39,17 +63,23 @@ class AuthScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  content : {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems:'center',
-    width : '100%'
-  },
 
   linearGradient: {
     flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
+    flexDirection : 'column'
+  },
+  
+  content : {
+    flex: 1,
+    alignItems: 'center',
+    top : '10%'
+  },
+
+  LogoImg: {
+    flex: 1,
+    height : null,
+    width : width * 0.8,
+    resizeMode : 'contain'
   }
 });
 

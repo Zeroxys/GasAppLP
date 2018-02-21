@@ -4,7 +4,7 @@ import {View, TouchableOpacity, Text, StyleSheet} from 'react-native'
 
 const ButtonRegister = (props) => {
   return (
-    <TouchableOpacity style={[styles.content, {backgroundColor : props.color}]} onPress={() => props.onPress()}>
+    <TouchableOpacity style={[styles.content, {backgroundColor : props.color}]} onPress={props.onPress}>
       <Text style={{color : 'white', fontWeight : '900'}}>{props.name}</Text>
     </TouchableOpacity>
   )
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex : 0,
     height : 30,
-    elevation : 3,
+    elevation : 5,
     borderRadius : 3
   }
 })
