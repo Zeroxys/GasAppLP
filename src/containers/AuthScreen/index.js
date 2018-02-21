@@ -7,7 +7,7 @@ import {Image} from 'react-native-animatable'
 import LogoImg from '../../assets/gas.png'
 import LogoImg2 from '../../assets/iconGas.png'
 import Opening from './opening'
-import SignInForm from './SignInForm'
+import SignupForm from './SignupForm'
 
 const {width, height} = Dimensions.get('window')
 
@@ -30,13 +30,26 @@ class AuthScreen extends Component {
   _setVisibleForm = async (visibleForm) => {
     this.setState ( prevState => {
       return {
-        visibleForm : prevState.visibleForm = true
+        visibleForm : prevState.visibleForm = visibleForm
       }
     })
-    console.warn(visibleForm)
   }
 
   render() {
+
+    let OpeningButtons = null
+
+    if(!this.state.visibleForm && !this.props.isLoggedIn) {
+      OpeningButtons = <Opening
+              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+              onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+    }
+
+    if(this.state.visibleForm === 'SIGNUP') {
+      OpeningButtons =  <SignupForm
+        onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+        onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+    }
 
     return (
       <LinearGradient colors={['#4fc3f7', '#3b5998', '#192f6a']} style={styles.linearGradient}>
@@ -55,20 +68,7 @@ class AuthScreen extends Component {
             style={styles.LogoImg}
             source={LogoImg2}/>
 
-          {(!this.state.visibleForm && !this.props.isLoggedIn) && (
-            <Opening
-              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
-              onSignInPress={() => this._setVisibleForm('LOGIN')}
-            />
-          )}
-
-          {(!this.state.visibleForm === "SIGNUP") && (
-            <SignInForm
-              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
-              onSignInPress={() => this._setVisibleForm('LOGIN')}
-            />
-          )}
-
+          {OpeningButtons}
 
         </View>
       </LinearGradient>
