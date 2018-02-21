@@ -33,7 +33,6 @@ const Opening = (props) => {
 const styles = StyleSheet.create({
   container : {
     flex: 1,
-    top : '10%',
     width : '70%',
     height : 100
   },
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderWidth: StyleSheet.hairlineWidth,
     height: StyleSheet.hairlineWidth,
-    borderColor: '#9B9FA4'
+    borderColor: '#FFFFFF'
   },
 
   separatorOr: {

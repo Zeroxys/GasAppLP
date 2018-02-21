@@ -5,7 +5,9 @@ import LinearGradient from 'react-native-linear-gradient'
 import {Image} from 'react-native-animatable'
 
 import LogoImg from '../../assets/gas.png'
+import LogoImg2 from '../../assets/iconGas.png'
 import Opening from './opening'
+import SignInForm from './SignInForm'
 
 const {width, height} = Dimensions.get('window')
 
@@ -26,6 +28,11 @@ class AuthScreen extends Component {
   }
 
   _setVisibleForm = async (visibleForm) => {
+    this.setState ( prevState => {
+      return {
+        visibleForm : prevState.visibleForm = true
+      }
+    })
     console.warn(visibleForm)
   }
 
@@ -46,10 +53,17 @@ class AuthScreen extends Component {
             duration={900}
             delay={2700}
             style={styles.LogoImg}
-            source={LogoImg}/>
+            source={LogoImg2}/>
 
           {(!this.state.visibleForm && !this.props.isLoggedIn) && (
             <Opening
+              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+              onSignInPress={() => this._setVisibleForm('LOGIN')}
+            />
+          )}
+
+          {(!this.state.visibleForm === "SIGNUP") && (
+            <SignInForm
               onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
               onSignInPress={() => this._setVisibleForm('LOGIN')}
             />
@@ -78,7 +92,7 @@ const styles = StyleSheet.create({
   LogoImg: {
     flex: 1,
     height : null,
-    width : width * 0.8,
+    width : width * 0.5,
     resizeMode : 'contain'
   }
 });

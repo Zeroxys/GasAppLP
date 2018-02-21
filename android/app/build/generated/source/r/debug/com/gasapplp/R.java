@@ -2035,6 +2035,7 @@ public final class R {
     public static final int abc_textfield_search_material=0x7f06004a;
     public static final int notification_template_icon_bg=0x7f06004b;
     public static final int screen=0x7f06004c;
+    public static final int src_assets_gas=0x7f06004d;
   }
   public static final class id {
     public static final int action0=0x7f070000;
