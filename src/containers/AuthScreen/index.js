@@ -7,7 +7,9 @@ import {Image} from 'react-native-animatable'
 import LogoImg from '../../assets/gas.png'
 import LogoImg2 from '../../assets/iconGas.png'
 import Opening from './opening'
+
 import SignupForm from './SignupForm'
+import LoginForm from './LoginForm'
 
 const {width, height} = Dimensions.get('window')
 
@@ -42,12 +44,18 @@ class AuthScreen extends Component {
 
     if(!this.state.visibleForm && !this.props.isLoggedIn) {
       OpeningButtons = <Opening
-              onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
-              onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+        onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+        onSignInPress={() => this._setVisibleForm('LOGIN')}/>
     }
 
     if(this.state.visibleForm === 'SIGNUP') {
       Forms =  <SignupForm
+        onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+        onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+    }
+
+    if(this.state.visibleForm === 'LOGIN') {
+      Forms =  <LoginForm
         onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
         onSignInPress={() => this._setVisibleForm('LOGIN')}/>
     }
