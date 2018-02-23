@@ -39,7 +39,7 @@ formStyles.textboxView.error.borderBottomWidth = 1;
 formStyles.textboxView.error.borderColor = '#FFF';
 formStyles.textbox.normal.marginBottom = 5;
 
-var User = t.struct({
+var LoginUser = t.struct({
   user :t.String,
   password : t.String
 })
@@ -55,6 +55,7 @@ const options = {
     password : {
       placeholder : 'CONTRASEÑA',
       password : true,
+      secureTextEntry: true,
       error : <Icon name="md-alert" size={19} color="#e53935"/>
     }
   }
@@ -70,24 +71,31 @@ class LoginForm extends Component {
         style={styles.container}>
           <Form
             ref="form"
-            type={User}
+            type={LoginUser}
             options={options}/>
 
             <ButtonRegister
               color='#5A8DFE'
               name="INICIAR SESIÓN"
               onPress={this._onPress}/>
+
+            <Text style={styles.link}>{'Aun no estas registrado ? '}</Text>
       </View>)
   }
 }
 const styles = StyleSheet.create({
   container : {
     flex:0,
-    //borderWidth : 2,
-    height: height * 0.5,
+    borderWidth : 2,
+    height: null,
     borderRadius : 3,
-    borderColor: 'white',
+    borderColor: 'rgba(255,255,255,0.6)',
     width : width * 0.8,
+  },
+  link: {
+    color: 'rgba(255,255,255,0.6)',
+    alignSelf: 'center',
+    padding: 20
   }
 })
 

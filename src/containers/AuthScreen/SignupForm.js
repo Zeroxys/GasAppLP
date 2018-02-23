@@ -73,6 +73,7 @@ const options = {
     password : {
       placeholder : 'CONTRASEÑA',
       password : true,
+      secureTextEntry: true,
       error : <Icon name="md-alert" size={19} color="#e53935"/>
     }
   }

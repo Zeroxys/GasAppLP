@@ -38,7 +38,7 @@ class AuthScreen extends Component {
   }
 
   render() {
-    let formStyle = !this.state.visibleForm ? { height: 0 } : { marginTop: 40 }
+    let formStyle = !this.state.visibleForm ? { height: 0 } : { marginTop: 20 }
     let OpeningButtons = null
     let Forms = null
 
@@ -78,14 +78,7 @@ class AuthScreen extends Component {
             source={LogoImg2}/>
 
           {OpeningButtons}
-
-          <KeyboardAvoidingView            
-            keyboardVerticalOffset={-1200}
-            behavior={'padding'}
-            style={[formStyle]}>
-            {Forms}
-          </KeyboardAvoidingView>
-
+          {Forms}
         </View>
       </LinearGradient>
     )
@@ -95,18 +88,23 @@ class AuthScreen extends Component {
 const styles = StyleSheet.create({
 
   linearGradient: {
-    flex: 1,
-    flexDirection : 'column'
+    flex:1,
   },
   
   content : {
+    borderWidth : 5,
+    borderColor : 'green',
     flex: 1,
     flexDirection : 'column',
     alignItems: 'center',
+    justifyContent : 'space-around',
     top : '4%'
   },
 
   LogoImg: {
+    flex:1,
+    borderWidth : 2,
+    borderColor :'red',
     flex: 1,
     height : null,
     width : width * 0.5,
