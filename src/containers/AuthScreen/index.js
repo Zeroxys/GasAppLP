@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, View, StatusBar, Dimensions } from 'react-native'
+import { StyleSheet, View, StatusBar, Dimensions, KeyboardAvoidingView } from 'react-native'
 import Icons from 'react-native-vector-icons/Ionicons'
 import LinearGradient from 'react-native-linear-gradient'
 import {Image} from 'react-native-animatable'
@@ -36,8 +36,9 @@ class AuthScreen extends Component {
   }
 
   render() {
-
+    let formStyle = !this.state.visibleForm ? { height: 0 } : { marginTop: 40 }
     let OpeningButtons = null
+    let Forms = null
 
     if(!this.state.visibleForm && !this.props.isLoggedIn) {
       OpeningButtons = <Opening
@@ -46,7 +47,7 @@ class AuthScreen extends Component {
     }
 
     if(this.state.visibleForm === 'SIGNUP') {
-      OpeningButtons =  <SignupForm
+      Forms =  <SignupForm
         onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
         onSignInPress={() => this._setVisibleForm('LOGIN')}/>
     }
@@ -70,6 +71,13 @@ class AuthScreen extends Component {
 
           {OpeningButtons}
 
+          <KeyboardAvoidingView            
+            keyboardVerticalOffset={-1200}
+            behavior={'padding'}
+            style={[formStyle]}>
+            {Forms}
+          </KeyboardAvoidingView>
+
         </View>
       </LinearGradient>
     )
@@ -85,14 +93,16 @@ const styles = StyleSheet.create({
   
   content : {
     flex: 1,
+    flexDirection : 'column',
     alignItems: 'center',
-    top : '10%'
+    top : '4%'
   },
 
   LogoImg: {
     flex: 1,
     height : null,
     width : width * 0.5,
+    alignSelf : 'center',
     resizeMode : 'contain'
   }
 });
