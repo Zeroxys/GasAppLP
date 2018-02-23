@@ -1,11 +1,26 @@
 import React from 'React'
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native'
-//import LinearGradient from 'react-native-linear-gradient'
+import {View, TouchableOpacity, Text, StyleSheet, ActivityIndicator} from 'react-native'
 
 const ButtonRegister = (props) => {
+  let label = null   
+  let onPress = props.Login ? props.onPress : props.Login
+
+  if(props.isLoading) {
+    label = <ActivityIndicator size="small" color="white"/>
+  }
+  if(!props.isLoading) {
+    label = <Text style={{color : 'white', fontWeight : '900'}}>{props.name}</Text>
+  }
+
+
+  console.warn('recibo : ' + props.Login)
   return (
-    <TouchableOpacity style={[styles.content, {backgroundColor : props.color}]} onPress={props.onPress}>
-      <Text style={{color : 'white', fontWeight : '900'}}>{props.name}</Text>
+    <TouchableOpacity 
+      style={[styles.content, {backgroundColor : props.color}]} 
+      onPress={() => props.onPress()}>
+
+      {label}
+
     </TouchableOpacity>
   )
 }

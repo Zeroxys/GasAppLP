@@ -4,62 +4,13 @@ import {View, Text} from 'react-native-animatable'
 import Icon from 'react-native-vector-icons/Ionicons'
 import t from 'tcomb-form-native'
 
+import {LoginUser, formStyles, options} from '../../utils/LoginModel'
 import ButtonRegister from '../../components/UI/Button'
 
 const {height, width} = Dimensions.get('window')
 
 const Form = t.form.Form
 const stylesheet = t.form.Form.stylesheet
-
-const formStyles = {...stylesheet}
-
-formStyles.fieldSet = "red"
-
-formStyles.formGroup.normal.marginBottom = 10
-formStyles.formGroup.error.marginBottom = 0
-
-formStyles.button.height = 0
-
-formStyles.textbox.normal.borderWidth = 0;
-formStyles.textbox.normal.color = 'white'
-formStyles.textbox.normal.borderWidth = 0;
-formStyles.textbox.normal.fontSize = 10;
-formStyles.textbox.error.fontSize = 10;
-formStyles.textbox.error.borderWidth = 0;
-formStyles.textbox.normal.marginBottom = 0;
-formStyles.textbox.error.marginBottom = 0;
-
-formStyles.textboxView.normal.borderWidth = 0;
-formStyles.textboxView.normal.borderColor = '#FFF';
-formStyles.textboxView.error.borderWidth = 0;
-formStyles.textboxView.normal.borderRadius = 0;
-formStyles.textboxView.error.borderRadius = 0;
-formStyles.textboxView.normal.borderBottomWidth = 1;
-formStyles.textboxView.error.borderBottomWidth = 1;
-formStyles.textboxView.error.borderColor = '#FFF';
-formStyles.textbox.normal.marginBottom = 5;
-
-var LoginUser = t.struct({
-  user :t.String,
-  password : t.String
-})
-
-const options = {
-  auto : 'placeholders',
-  fields : {
-    user : {
-      placeholder : 'USUARIO',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    password : {
-      placeholder : 'CONTRASEÑA',
-      password : true,
-      secureTextEntry: true,
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    }
-  }
-}
 
 class LoginForm extends Component { 
 
@@ -68,6 +19,8 @@ class LoginForm extends Component {
   }
 
   render () {
+
+    console.warn(this.props.Login)
     return(<View
         animation={'fadeInUp'}
         duration={1200}
@@ -81,7 +34,8 @@ class LoginForm extends Component {
             <ButtonRegister
               color='#5A8DFE'
               name="INICIAR SESIÓN"
-              onPress={this._onPress}/>
+              Login={this.props.Login}
+              isLoading={this.props.isLoading}/>
 
             <TouchableOpacity onPress={() => this.props.onLinkPress()}>
               <Text 

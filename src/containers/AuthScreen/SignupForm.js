@@ -5,15 +5,15 @@ import t from 'tcomb-form-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import ButtonRegister from '../../components/UI/Button'
+import {UserSignUpModel, options} from '../../utils/SignupModel'
+
 const {width, height} = Dimensions.get('window')
 
 const Form = t.form.Form
 const stylesheet = t.form.Form.stylesheet
 
 const formStyles = {...stylesheet}
-
-formStyles.fieldSet = "red"
-
+/*
 formStyles.formGroup.normal.marginBottom = 0
 formStyles.formGroup.error.marginBottom = 0
 
@@ -37,47 +37,7 @@ formStyles.textboxView.normal.borderBottomWidth = 1;
 formStyles.textboxView.error.borderBottomWidth = 1;
 formStyles.textboxView.error.borderColor = '#FFF';
 formStyles.textbox.normal.marginBottom = 5;
-
-var User = t.struct({
-  name: t.String,
-  //user :t.String,
-  email : t.String,
-  phone : t.String,
-  password : t.String
-})
-
-const options = {
-  auto : 'placeholders',
-  fields : {
-
-    name : {
-      placeholder : 'NOMBRE',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    user : {
-      placeholder : 'USUARIO',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    email : {
-      placeholder : 'CORREO ELECTRONICO',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    phone : {
-      placeholder : 'TELEFONO',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    password : {
-      placeholder : 'CONTRASEÑA',
-      password : true,
-      secureTextEntry: true,
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    }
-  }
-}
+*/
 
 class SignupForm extends Component {
   _onPress = ()  => {
@@ -93,9 +53,10 @@ class SignupForm extends Component {
         animation={'fadeInUp'}
         duration={1200}
         delay={0}>
+
         <Form
           ref="form"
-          type={User}
+          type={UserSignUpModel}
           options={options}/>
   
         <ButtonRegister
@@ -105,7 +66,7 @@ class SignupForm extends Component {
 
         <TouchableOpacity onPress={() => this.props.onLinkPress()}>
           <Text 
-            style={styles.link}>{'Aun no estas registrado ? '}</Text>
+            style={styles.link}>{'Ya tienes una cuenta ? '}</Text>
         </TouchableOpacity>
 
       </View>

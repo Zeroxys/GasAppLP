@@ -14,7 +14,6 @@ class App extends Component {
 
   //Simulate what the user is Login
   _Login = (username, password) => {
-    
     this.setState( (prevState) => {
       isLoading : this.prevState.isLoading = true
     })
@@ -53,8 +52,8 @@ class App extends Component {
   render() {
     return (
       <AuthScreen
-        login={this._Login}
-        signup={this._SignUp}
+        Login={this._Login}
+        Signup={this._SignUp}
         isLoggedIn={this.state.isLoggedIn}
         isLoading={this.state.isLoading}
         isAppReady={this.state.isAppReady}/>

@@ -38,24 +38,30 @@ class AuthScreen extends Component {
   }
 
   render() {
+
     let formStyle = !this.state.visibleForm ? { height: 0 } : { marginTop: 20 }
     let OpeningButtons = null
     let Forms = null
 
+    //Show the Buttons component
     if(!this.state.visibleForm && !this.props.isLoggedIn) {
       OpeningButtons = <Opening
-        onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
+        onCreateAccountPress={() => this._setVisibleForm('LOGIN')}
         onSignInPress={() => this._setVisibleForm('LOGIN')}/>
     }
 
+    //Redirect to SignUp Form
     if(this.state.visibleForm === 'SIGNUP') {
       Forms =  <SignupForm
         onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
-        onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+        onLinkPress={() => this._setVisibleForm('LOGIN')}/>
     }
 
+    // Redirect to Login Form
     if(this.state.visibleForm === 'LOGIN') {
       Forms =  <LoginForm
+        Login={this.props.Login}
+        isLoading={this.props.isLoading}
         onLinkPress={() => this._setVisibleForm('SIGNUP')}/>
     }
 
