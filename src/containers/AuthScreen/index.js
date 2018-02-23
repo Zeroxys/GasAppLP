@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, View, StatusBar, Dimensions, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, View, StatusBar, Dimensions} from 'react-native'
 import Icons from 'react-native-vector-icons/Ionicons'
 import LinearGradient from 'react-native-linear-gradient'
 import {Image} from 'react-native-animatable'
@@ -56,8 +56,7 @@ class AuthScreen extends Component {
 
     if(this.state.visibleForm === 'LOGIN') {
       Forms =  <LoginForm
-        onCreateAccountPress={() => this._setVisibleForm('SIGNUP')}
-        onSignInPress={() => this._setVisibleForm('LOGIN')}/>
+        onLinkPress={() => this._setVisibleForm('SIGNUP')}/>
     }
 
     return (
@@ -92,23 +91,18 @@ const styles = StyleSheet.create({
   },
   
   content : {
-    borderWidth : 5,
-    borderColor : 'green',
     flex: 1,
+    height: height,
     flexDirection : 'column',
     alignItems: 'center',
-    justifyContent : 'space-around',
-    top : '4%'
+    justifyContent : 'space-between',
+    marginTop : '6%'
   },
 
   LogoImg: {
     flex:1,
-    borderWidth : 2,
-    borderColor :'red',
-    flex: 1,
-    height : null,
+    marginTop: '25%',
     width : width * 0.5,
-    alignSelf : 'center',
     resizeMode : 'contain'
   }
 });

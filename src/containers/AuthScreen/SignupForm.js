@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleSheet, Dimensions} from 'react-native'
+import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import {View, Text} from 'react-native-animatable'
 import t from 'tcomb-form-native'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -40,7 +40,7 @@ formStyles.textbox.normal.marginBottom = 5;
 
 var User = t.struct({
   name: t.String,
-  user :t.String,
+  //user :t.String,
   email : t.String,
   phone : t.String,
   password : t.String
@@ -88,7 +88,6 @@ class SignupForm extends Component {
   }
 
   render () {
-    console.warn(JSON.stringify(formStyles, null, 2))
     return (
       <View style={styles.container}
         animation={'fadeInUp'}
@@ -103,6 +102,12 @@ class SignupForm extends Component {
             color='#5A8DFE'
             name="REGISTRATE"
             onPress={this._onPress}/>  
+
+        <TouchableOpacity onPress={() => this.props.onLinkPress()}>
+          <Text 
+            style={styles.link}>{'Aun no estas registrado ? '}</Text>
+        </TouchableOpacity>
+
       </View>
     )
   }
@@ -116,6 +121,12 @@ const styles = StyleSheet.create({
     borderRadius : 3,
     borderColor: 'white',
     width : width * 0.8,
+  },
+
+  link: {
+    color: 'rgba(255,255,255,0.6)',
+    alignSelf: 'center',
+    padding: 20
   }
 })
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleSheet,Dimensions} from 'react-native'
+import {StyleSheet,Dimensions, TouchableOpacity} from 'react-native'
 import {View, Text} from 'react-native-animatable'
 import Icon from 'react-native-vector-icons/Ionicons'
 import t from 'tcomb-form-native'
@@ -15,7 +15,7 @@ const formStyles = {...stylesheet}
 
 formStyles.fieldSet = "red"
 
-formStyles.formGroup.normal.marginBottom = 0
+formStyles.formGroup.normal.marginBottom = 10
 formStyles.formGroup.error.marginBottom = 0
 
 formStyles.button.height = 0
@@ -61,7 +61,11 @@ const options = {
   }
 }
 
-class LoginForm extends Component {
+class LoginForm extends Component { 
+
+  constructor(props) {
+    super(props)
+  }
 
   render () {
     return(<View
@@ -79,17 +83,17 @@ class LoginForm extends Component {
               name="INICIAR SESIÓN"
               onPress={this._onPress}/>
 
-            <Text style={styles.link}>{'Aun no estas registrado ? '}</Text>
+            <TouchableOpacity onPress={() => this.props.onLinkPress()}>
+              <Text 
+                style={styles.link}>{'Aun no estas registrado ? '}</Text>
+            </TouchableOpacity>
       </View>)
   }
 }
 const styles = StyleSheet.create({
   container : {
-    flex:0,
-    borderWidth : 2,
-    height: null,
+    flex:1,
     borderRadius : 3,
-    borderColor: 'rgba(255,255,255,0.6)',
     width : width * 0.8,
   },
   link: {
