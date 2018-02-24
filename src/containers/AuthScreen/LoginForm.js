@@ -17,8 +17,6 @@ class LoginForm extends Component {
   }
 
   render () {
-
-    console.warn(this.props.Login)
     return(<View
         animation={'fadeInUp'}
         duration={1200}
