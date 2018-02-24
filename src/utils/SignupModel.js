@@ -1,8 +1,9 @@
+import React from 'react'
 import t from 'tcomb-form-native'
+import Icon from 'react-native-vector-icons'
 
-var User = t.struct({
+const UserSignupModel = t.struct({
   name: t.String,
-  //user :t.String,
   email : t.String,
   phone : t.String,
   password : t.String
@@ -11,14 +12,8 @@ var User = t.struct({
 const options = {
   auto : 'placeholders',
   fields : {
-
     name : {
       placeholder : 'NOMBRE',
-      error : <Icon name="md-alert" size={19} color="#e53935"/>
-    },
-
-    user : {
-      placeholder : 'USUARIO',
       error : <Icon name="md-alert" size={19} color="#e53935"/>
     },
 

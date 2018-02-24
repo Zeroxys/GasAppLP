@@ -8,9 +8,7 @@ import {LoginUser, formStyles, options} from '../../utils/LoginModel'
 import ButtonRegister from '../../components/UI/Button'
 
 const {height, width} = Dimensions.get('window')
-
 const Form = t.form.Form
-const stylesheet = t.form.Form.stylesheet
 
 class LoginForm extends Component { 
 
@@ -26,6 +24,7 @@ class LoginForm extends Component {
         duration={1200}
         delay={0}
         style={styles.container}>
+
           <Form
             ref="form"
             type={LoginUser}

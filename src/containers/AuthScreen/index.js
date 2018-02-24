@@ -35,6 +35,7 @@ class AuthScreen extends Component {
         visibleForm : prevState.visibleForm = visibleForm
       }
     })
+    console.warn(visibleForm)
   }
 
   render() {
