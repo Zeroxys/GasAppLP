@@ -66,8 +66,9 @@ class AuthScreen extends Component {
         onLinkPress={() => this._setVisibleForm('LOGIN')}/>
     }
 
+    //'#4fc3f7', '#3b5998', '#192f6a'
     return (
-      <LinearGradient colors={['#4fc3f7', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+      <LinearGradient colors={['#00acd2', '#034d88']} style={styles.linearGradient}>
         <StatusBar
           backgroundColor="blue"
           barStyle="light-content"
