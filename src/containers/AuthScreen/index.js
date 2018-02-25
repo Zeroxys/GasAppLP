@@ -20,12 +20,15 @@ class AuthScreen extends Component {
   }
 
   componentWillUpdate (nextProps) {
-    //if(!this.props.isLoggedIn && nextProps.isLoggedIn) {
-     // this._hideAuthScreen()
-    //}
+    if(!this.props.isLoggedIn && nextProps.isLoggedIn) {
+      this._hideAuthScreen()
+    }
   }
 
   _hideAuthScreen = async () => {
+
+    await this._setVisibleForm(null)
+    await this.logoImgRef.fadeOut(1200)
     console.warn('looool escondiendome')
   }
 
@@ -80,6 +83,7 @@ class AuthScreen extends Component {
             animation={'bounceIn'}
             duration={900}
             delay={2700}
+            ref={ ref => this.logoImgRef = ref}
             style={styles.LogoImg}
             source={LogoImg2}/>
 
