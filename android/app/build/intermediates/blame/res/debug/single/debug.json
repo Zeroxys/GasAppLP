@@ -16,20 +16,20 @@
         "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
-    },
-    {
-        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/layout_redbox_view.xml.flat",
         "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/res/layout/redbox_view.xml"
     },
     {
-        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "/home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
