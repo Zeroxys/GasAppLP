@@ -14,17 +14,23 @@ class App extends Component {
 
   //Simulate what the user is Login
   _Login = (username, password) => {
-    this.setState( (prevState) => {
-      isLoading : this.prevState.isLoading = true
+    this.setState( prevState => {
+      return {
+        isLoading : !prevState.isLoading
+      }
     })
 
     setTimeout( () => {
-      this.setState( (prevState) => {
-        isLoading : this.prevState.isLoading = false
-        isLoggedIn : this.prevState.isLoggedIn = true
-      })
-    }, 1000)
+      this.setState( prevState => {
 
+        return {
+          isLoading : prevState.isLoading = false,
+          isLoggedIn : prevState.isLoggedIn = true
+        }
+      })
+    }, 2500)
+
+    console.warn(this.state.isLoading)
   }
 
   //Simulate what the user is SignUp

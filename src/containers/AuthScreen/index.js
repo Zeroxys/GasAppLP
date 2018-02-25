@@ -20,9 +20,9 @@ class AuthScreen extends Component {
   }
 
   componentWillUpdate (nextProps) {
-    if(!this.props.isLoggedIn && nextProps.isLoggedIn) {
-      this._hideAuthScreen()
-    }
+    //if(!this.props.isLoggedIn && nextProps.isLoggedIn) {
+     // this._hideAuthScreen()
+    //}
   }
 
   _hideAuthScreen = async () => {
@@ -73,10 +73,9 @@ class AuthScreen extends Component {
           backgroundColor="blue"
           barStyle="light-content"
           translucent={true}
-          backgroundColor="rgba(0, 0, 0, 0.20)"/>
+          backgroundColor="rgba(0, 0, 0, 0.10)"/>
 
-        <View style={styles.content}>
-          
+        <View style={styles.content}>          
           <Image
             animation={'bounceIn'}
             duration={900}

@@ -17,6 +17,9 @@ class LoginForm extends Component {
   }
 
   render () {
+
+    let state = this.props.isLoading
+
     return(<View
         animation={'fadeInUp'}
         duration={1200}
@@ -27,7 +30,7 @@ class LoginForm extends Component {
             ref="form"
             type={LoginUser}
             options={options}/>
-
+            
             <ButtonRegister
               color='#5A8DFE'
               name="INICIAR SESIÓN"

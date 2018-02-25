@@ -3,7 +3,7 @@ import {View, TouchableOpacity, Text, StyleSheet, ActivityIndicator} from 'react
 
 const ButtonRegister = (props) => {
   let label = null   
-  let onPress = props.Login ? props.onPress : props.Login
+  let onPress = (!props.onPress && props.Login) ?  props.Login : props.onPress
 
   if(props.isLoading) {
     label = <ActivityIndicator size="small" color="white"/>
@@ -15,10 +15,8 @@ const ButtonRegister = (props) => {
   return (
     <TouchableOpacity 
       style={[styles.content, {backgroundColor : props.color}]} 
-      onPress={() => props.onPress()}>
-
+      onPress={() => onPress()}>
       {label}
-
     </TouchableOpacity>
   )
 }
