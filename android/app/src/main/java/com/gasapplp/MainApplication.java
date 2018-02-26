@@ -2,6 +2,8 @@ package com.gasapplp;
 
 import android.app.Application;
 
+import com.airbnb.android.react.maps.MapsPackage;
+
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -29,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new SplashScreenReactPackage(),
           new VectorIconsPackage(),
-          new LinearGradientPackage()
+          new LinearGradientPackage(),
+          new MapsPackage()
       );
     }
 
