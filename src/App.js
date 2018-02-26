@@ -3,6 +3,7 @@ import {} from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
 
 import AuthScreen from './containers/AuthScreen/index'
+import HomeScreen from './containers/HomeScreen/index'
 
 class App extends Component {
 
@@ -56,14 +57,22 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <AuthScreen
-        Login={this._Login}
-        Signup={this._SignUp}
-        isLoggedIn={this.state.isLoggedIn}
-        isLoading={this.state.isLoading}
-        isAppReady={this.state.isAppReady}/>
-    )
+
+    let Screen = null
+
+    if(this.state.isAppReady) {
+      Screen = <HomeScreen/>
+    } else {
+      Screen = <AuthScreen
+                  Login={this._Login}
+                  Signup={this._SignUp}
+                  isLoggedIn={this.state.isLoggedIn}
+                  isLoading={this.state.isLoading}
+                  isAppReady={this.state.isAppReady}
+                  onLoginAnimationCompleted={() => this.setState({isAppReady : true})}/> 
+    }
+
+    return Screen
   }
 }
 

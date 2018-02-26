@@ -26,10 +26,9 @@ class AuthScreen extends Component {
   }
 
   _hideAuthScreen = async () => {
-
     await this._setVisibleForm(null)
     await this.logoImgRef.fadeOut(1200)
-    console.warn('looool escondiendome')
+    this.props.onLoginAnimationCompleted()
   }
 
   _setVisibleForm = async (visibleForm) => {
