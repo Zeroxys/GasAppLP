@@ -79,7 +79,7 @@ class HomeScreen extends Component {
         <MapView
           marker = {this.state.marker}
           initialRegion={this.state.currentLocation}
-          onPress={this.locationHandler}
+          OnPress={this.locationHandler}
           Ref = {ref => this.map = ref}/>
         <PriceBox/>
         <ArrowButton OnPress={this.toggle} Icon={this.state.expand}/>

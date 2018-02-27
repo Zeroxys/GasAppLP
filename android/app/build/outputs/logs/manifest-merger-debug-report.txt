@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
 MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:react-native-vector-icons] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/AndroidManifest.xml:2:1-15:12
@@ -26,9 +26,9 @@ MERGED from [com.facebook.fresco:drawee:1.3.0] /home/miguel/.gradle/caches/trans
 MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/5b1f70968a1769cb9ede416fd60990cb/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/9993eaf6837392797db706a551f8f883/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/d8e9fab93fd2720b82bf74e289037d9a/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12
 	package
 		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:2:5-27
 		INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml
@@ -57,10 +57,14 @@ MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches
 MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:7:22-75
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:8:22-76
 uses-sdk
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:9:5-11:41
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:5-12:41
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:5-12:41
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:5-12:41
 MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
@@ -103,20 +107,20 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /home/miguel/.gradle/
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/9993eaf6837392797db706a551f8f883/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/d8e9fab93fd2720b82bf74e289037d9a/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/d8e9fab93fd2720b82bf74e289037d9a/AndroidManifest.xml:5:5-7:41
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:9:5-11:41
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:5-12:41
+INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:5-12:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/86b60a931af21a02e88d48deed47cb5b/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:11:9-38
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:12:9-38
 		INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:11:9-35
 		INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml
 application
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:13:5-35:19
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:14:5-36:19
 MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
 MERGED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
 MERGED from [com.facebook.react:react-native:0.52.0] /home/miguel/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/75a6cd795f64aba0436fdbeabfdf6706/AndroidManifest.xml:13:5-20
@@ -144,45 +148,45 @@ MERGED from [org.webkit:android-jsc:r174650] /home/miguel/.gradle/caches/transfo
 	android:supportsRtl
 		ADDED from [:react-native-splash-screen] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:16:7-39
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:17:7-39
 	android:icon
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:17:7-41
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:18:7-41
 	android:allowBackup
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:15:7-33
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:16:7-33
 	android:theme
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:18:7-38
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:19:7-38
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:14:7-38
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:15:7-38
 activity#com.gasapplp.MainActivity
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:19:7-28:18
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:20:7-29:18
 	android:label
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:21:9-41
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:22:9-41
 	android:windowSoftInputMode
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:23:9-51
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:24:9-51
 	android:configChanges
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:22:9-79
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:23:9-79
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:20:9-37
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:21:9-37
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:24:9-27:25
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:25:9-28:25
 action#android.intent.action.MAIN
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:25:13-65
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:26:13-65
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:25:21-62
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:26:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:26:13-73
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:27:13-73
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:26:23-70
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:27:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:29:7-84
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:30:7-84
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:29:17-81
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:30:17-81
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:32:9-34:70
+ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:33:9-35:70
 	android:value
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:34:13-68
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:35:13-68
 	android:name
-		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:33:13-58
+		ADDED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:34:13-58
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from [:react-native-maps] /home/miguel/Dev/Mobile/GasAppLP/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:10:5-81
 	android:name
@@ -212,8 +216,8 @@ ADDED from [com.google.android.gms:play-services-basement:10.2.4] /home/miguel/.
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:10.2.4] /home/miguel/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/72185052dc43d3490c0fb4e32704c58a/AndroidManifest.xml:20:20-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-37:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /home/miguel/Dev/Mobile/GasAppLP/android/app/src/main/AndroidManifest.xml:1:1-38:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

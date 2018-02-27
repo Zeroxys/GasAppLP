@@ -1,4 +1,4 @@
-#Sun Feb 25 20:13:34 CST 2018
+#Tue Feb 27 14:03:14 CST 2018
 base.0=/home/miguel/Dev/Mobile/GasAppLP/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
