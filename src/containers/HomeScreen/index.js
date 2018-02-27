@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {StyleSheet,Text, View, Dimensions} from 'react-native'
-import MapView from 'react-native-maps'
+
+import MapView from '../../components/Map/MapView'
+import PositionButton from '../../components/PositionButton/PositionButton'
 
 const {width, height} = Dimensions.get('window')
 
@@ -17,17 +19,69 @@ class HomeScreen extends Component {
     visible : false
   }
 
+  getCurrentPosition = (event) => {
+    navigator.geolocation.getCurrentPosition( pos => {
+      
+      const coordsEvent = {
+        nativeEvent : {
+          coordinate : {
+            latitude : pos.coords.latitude,
+            longitude :  pos.coords.longitude
+          }
+        }
+      }
+      
+      this.locationHandler(coordsEvent)
+
+    }, error_handler => {
+      if(error_handler) alert('get current position failed')
+    })
+  }
+
+  locationHandler = event => {
+    let coords = event.nativeEvent.coordinate
+
+    this.map.animateToRegion({
+      ...this.state.currentLocation,
+      latitude :  coords.latitude,
+      longitude : coords.longitude
+    })
+
+    this.setState(prevState => {
+      return {
+        currentLocation : {
+          ...prevState.currentLocation,
+          latitude : coords.latitude,
+          longitude : coords.longitude
+        },
+        marker : true
+      }
+    })
+  }
+
+  componentDidMount () {
+    this.getCurrentPosition()
+  }
+
   render () {
+    let arrowIcon = null
+
+    if(this.state.expand) {
+      arrowIcon = "ios-arrow-up"
+    } else {
+      arrowIcon = "ios-arrow-down"
+    }
+
     return( 
       <View style={styles.mapContent}>
-        <MapView 
-          style={styles.map}
-          loadingIndicatorColor={'#2A56C6'}
-          loadingBackgroundColor={'#2A56C6'}
+        
+        <MapView
+          marker = {this.state.marker}
           initialRegion={this.state.currentLocation}
           onPress={this.locationHandler}
-          ref = {ref => this.map = ref}>
-        </MapView>
+          Ref = {ref => this.map = ref}/>
+
+        <PositionButton getCurrentPosition={this.getCurrentPosition}/>
       </View>)
   }
 }
@@ -46,12 +100,6 @@ const styles = StyleSheet.create({
     minHeight : '100%',
     maxHeight : '100%',
     alignItems :'center',
-  },
-
-  map : {
-    position : 'absolute',
-    width : '100%',
-    height : '100%'
   }
 })
 
