@@ -3,6 +3,8 @@ import {StyleSheet,Text, View, Dimensions} from 'react-native'
 
 import MapView from '../../components/Map/MapView'
 import PositionButton from '../../components/PositionButton/PositionButton'
+import ArrowButton from '../../components/ArrowButton/ArrowButton'
+import PriceBox from '../../components/PriceBox/PriceBox'
 
 const {width, height} = Dimensions.get('window')
 
@@ -17,6 +19,14 @@ class HomeScreen extends Component {
     expand : true,
     marker : false,
     visible : false
+  }
+
+  toggle = () => {
+    this.setState( prevState => {
+      return {
+        expand : !prevState.expand
+      }
+    })
   }
 
   getCurrentPosition = (event) => {
@@ -64,24 +74,16 @@ class HomeScreen extends Component {
   }
 
   render () {
-    let arrowIcon = null
-
-    if(this.state.expand) {
-      arrowIcon = "ios-arrow-up"
-    } else {
-      arrowIcon = "ios-arrow-down"
-    }
-
     return( 
       <View style={styles.mapContent}>
-        
         <MapView
           marker = {this.state.marker}
           initialRegion={this.state.currentLocation}
           onPress={this.locationHandler}
           Ref = {ref => this.map = ref}/>
-
-        <PositionButton getCurrentPosition={this.getCurrentPosition}/>
+        <PriceBox/>
+        <ArrowButton OnPress={this.toggle} Icon={this.state.expand}/>
+        <PositionButton OnPress={this.getCurrentPosition}/>
       </View>)
   }
 }

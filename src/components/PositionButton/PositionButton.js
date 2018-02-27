@@ -6,7 +6,7 @@ const {width, height} = Dimensions.get('window')
 
 const PositionButton = (props) => {
   return (
-    <TouchableOpacity style={styles.buttonContent} onPress={props.getCurrentPosition}>
+    <TouchableOpacity style={styles.buttonContent} onPress={props.OnPress}>
       <View style={styles.iconContent}>
         <Icon color= "#4285F4" size={28} name="md-locate"/>
       </View>
@@ -16,7 +16,7 @@ const PositionButton = (props) => {
 
 const styles = StyleSheet.create({
   buttonContent : {
-    top : '70%',
+    top : '60%',
     left : '40%',
     backgroundColor: 'white',
     width : 50,
