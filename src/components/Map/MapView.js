@@ -17,7 +17,7 @@ const MapView = props => {
     loadingIndicatorColor={'#2A56C6'}
     loadingBackgroundColor={'#2A56C6'}
     initialRegion={props.initialRegion}
-    onPress={props.OnPress}
+    onPress={props.locationHandler}
     ref = {props.Ref}>
 
     {marker}
