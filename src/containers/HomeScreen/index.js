@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
 import {StyleSheet,Text, View, Dimensions} from 'react-native'
 
-import MapView from '../../components/Map/MapView'
-import PositionButton from '../../components/PositionButton/PositionButton'
-import ArrowButton from '../../components/ArrowButton/ArrowButton'
-import PriceBox from '../../components/PriceBox/PriceBox'
 import Aux from '../../components/HOC/Aux'
-import InfoContent from './InfoContent'
+import InfoContent from '../../components/InformationContent'
+import MapContent from '../../components/Map/MapContent'
 
 const {width, height} = Dimensions.get('window')
 
@@ -76,34 +73,19 @@ class HomeScreen extends Component {
   }
 
   render () {
-    return(
-      <Aux>
-        <View style={styles.mapContent}>
-          <MapView
-            marker = {this.state.marker}
-            initialRegion={this.state.currentLocation}
-            OnPress={this.locationHandler}
-            Ref = {ref => this.map = ref}/>
-          <PriceBox/>
-          <ArrowButton OnPress={this.toggle} Icon={this.state.expand}/>
-          <PositionButton OnPress={this.getCurrentPosition}/>
-          <InfoContent 
-            toggle = {this.toggle}
-            expand = {this.state.expand}
-            openModal={this.openModal} 
-            showOptions={this.showOptions}/>
-        </View>
-      </Aux>)
+    return (
+      <MapContent
+        marker = {this.state.marker}
+        initialRegion = {this.state.currentLocation}
+        OnPress = {this.locationHandler}
+        Ref = {ref => this.map = ref}
+        toggle = {this.toggle}
+        expand = {this.state.expand}
+        openModal = {this.openModal}
+        getCurrentPosition = {this.getCurrentPosition}
+        showOptions = {this.showOptions}/>
+    )
   }
 }
-
-const styles = StyleSheet.create({
-  mapContent : {
-    width : '100%',
-    minHeight : '100%',
-    maxHeight : '100%',
-    alignItems :'center',
-  }
-})
 
 export default HomeScreen
