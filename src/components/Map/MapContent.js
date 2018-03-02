@@ -19,8 +19,8 @@ const MapContent = props => {
         onPress={props.OnPress}
         Ref = {props.Ref}/>
       <PriceBox/>
-      <ArrowButton OnPress={props.toggle} Icon={props.expand}/>
       <PositionButton OnPress={props.getCurrentPosition}/>
+      <ArrowButton expand={props.expand} OnPress={props.toggle} Icon={props.expand}/>
     </View>)
 }
 

@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     height : 50,
     borderRadius : 100,
     elevation : 5,
+    
   },
 
   iconContent : {

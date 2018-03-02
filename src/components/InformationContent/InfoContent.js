@@ -10,15 +10,6 @@ import SuccessButton from '../UI/SuccessButton'
 const {width, height} = Dimensions.get('window')
 
 const InfoContent = (props) => {
-
-  let arrowIcon = null
-
-  if(props.expand) {
-    arrowIcon = "ios-arrow-up"
-  } else {
-    arrowIcon = "ios-arrow-down"
-  }
-
   return (
     <View style={styles.generalContent}>
       <View>

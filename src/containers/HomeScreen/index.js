@@ -26,6 +26,7 @@ class HomeScreen extends Component {
         expand : !prevState.expand
       }
     })
+
   }
 
   getCurrentPosition = (event) => {
@@ -74,16 +75,18 @@ class HomeScreen extends Component {
 
   render () {
     return (
-      <MapContent
-        marker = {this.state.marker}
-        initialRegion = {this.state.currentLocation}
-        OnPress = {this.locationHandler}
-        Ref = {ref => this.map = ref}
-        toggle = {this.toggle}
-        expand = {this.state.expand}
-        openModal = {this.openModal}
-        getCurrentPosition = {this.getCurrentPosition}
-        showOptions = {this.showOptions}/>
+      <View>
+        <MapContent
+          marker = {this.state.marker}
+          initialRegion = {this.state.currentLocation}
+          OnPress = {this.locationHandler}
+          Ref = {ref => this.map = ref}
+          toggle = {this.toggle}
+          expand = {this.state.expand}
+          openModal = {this.openModal}
+          getCurrentPosition = {this.getCurrentPosition}
+          showOptions = {this.showOptions}/>
+      </View>
     )
   }
 }
