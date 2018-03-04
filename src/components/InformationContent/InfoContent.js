@@ -35,8 +35,7 @@ const InfoContent = (props) => {
 const styles = StyleSheet.create({
 
   generalContent : {
-    width : '100%',
-    height : '100%',
+    position : 'absolute',
     justifyContent : 'center',
     alignItems : 'center',
   }

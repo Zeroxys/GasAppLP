@@ -25,13 +25,12 @@ const ArrowButton = (props) => {
 
 const styles = StyleSheet.create({
   container : {
+    position : 'absolute',
     alignItems : 'center',
     justifyContent : 'center',
+    bottom:  0,
     width : '100%',
-    top:'40%',
-    backgroundColor : 'rgba(0,0,0,0.2)',
-    minHeight : '10%',
-    maxHeight : '40%'
+    backgroundColor : 'rgba(0,0,0,0.20)'
   },
 
   expandButton : {

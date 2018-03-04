@@ -20,7 +20,6 @@ const InfoBox = (props) => {
 const styles = StyleSheet.create({
 
   infoContainers : {
-    //position : 'absolute',
     width : '100%',
   },
 

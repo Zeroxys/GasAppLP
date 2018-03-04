@@ -16,14 +16,15 @@ const PositionButton = (props) => {
 
 const styles = StyleSheet.create({
   buttonContent : {
-    top : '60%',
-    left : '40%',
+    position : 'absolute',
+    bottom : '9%',
+    right: '5%',
     backgroundColor: 'white',
     width : 50,
     height : 50,
     borderRadius : 100,
     elevation : 5,
-    
+    zIndex : 5,
   },
 
   iconContent : {
