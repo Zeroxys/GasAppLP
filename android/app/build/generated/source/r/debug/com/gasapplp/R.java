@@ -2247,6 +2247,8 @@ public final class R {
     public static final int notification_template_icon_bg=0x7f060060;
     public static final int screen=0x7f060061;
     public static final int src_assets_gas=0x7f060062;
+    public static final int src_assets_icon=0x7f060063;
+    public static final int src_assets_icongas=0x7f060064;
   }
   public static final class id {
     public static final int action0=0x7f070000;

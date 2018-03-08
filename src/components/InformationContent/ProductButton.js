@@ -1,9 +1,16 @@
 import React from 'react'
-import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, TextInput} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Collapsible from 'react-native-collapsible'
 
 const Info = (props) => {
+  props.showInput = true
+
+  if(props.showInput) {
+    showInput = <TextInput
+    style={{height: 40, borderColor: 'gray', borderWidth: 1}}/>
+  }
+
   return (
     <View style={styles.content}>
 
@@ -14,7 +21,10 @@ const Info = (props) => {
             <Icon name={props.iconName} size={22} color="#ffffff"/>
           </TouchableOpacity>
 
-          <Text>{props.name}</Text>
+          <View>
+          <TextInput
+    style={{height: 40, borderColor: 'gray', borderWidth: 1}}/>
+          </View>
 
           <TouchableOpacity onPress={props.showOptions}>
             <Icon name="md-add" size={22}/>

@@ -546,6 +546,8 @@ int drawable googleg_standard_color_18 0x7f06005f
 int drawable notification_template_icon_bg 0x7f060060
 int drawable screen 0x7f060061
 int drawable src_assets_gas 0x7f060062
+int drawable src_assets_icon 0x7f060063
+int drawable src_assets_icongas 0x7f060064
 int id action0 0x7f070000
 int id action_bar 0x7f070001
 int id action_bar_activity_content 0x7f070002

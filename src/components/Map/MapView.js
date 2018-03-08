@@ -2,8 +2,15 @@ import React from 'react'
 import {StyleSheet} from 'react-native'
 import Map, {Marker} from 'react-native-maps'
 import Aux from '../HOC/Aux'
+import MapDirections from './MapDirections'
+import trukImg from '../../assets/icon.png'
 
 const MapView = props => {
+
+  const trukerUbication = {
+    latitude : 17.989456, 
+    longitude : -92.947506,
+  }
 
   let marker = null
 
@@ -21,7 +28,8 @@ const MapView = props => {
     ref = {props.Ref}>
 
     {marker}
-    
+    <MapDirections currentLocation={props.initialRegion}/>
+    <Marker pinColor={'#2A56C6'} coordinate={trukerUbication} image={trukImg} />
   </Map>  
   )
 }
