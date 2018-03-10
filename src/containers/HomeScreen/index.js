@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {StyleSheet,Text, View, Dimensions} from 'react-native'
 
-import Aux from '../../components/HOC/Aux'
-import InfoContent from '../../components/InformationContent'
 import MapContent from '../../components/Map/MapContent'
 
 const {width, height} = Dimensions.get('window')
@@ -17,8 +15,18 @@ class HomeScreen extends Component {
     },
     expand : true,
     marker : false,
-    visible : false
+    visible : false,
+    showInputPrice : false
   }
+ 
+  showTextInputPrice = () => {
+    this.setState( (prevState) => {
+      return {
+        showInputPrice : !prevState.showInputPrice
+      }
+    })
+  }
+
 
   toggle = () => {
     this.setState( prevState => {
@@ -85,7 +93,10 @@ class HomeScreen extends Component {
           expand = {this.state.expand}
           openModal = {this.openModal}
           getCurrentPosition = {this.getCurrentPosition}
-          showOptions = {this.showOptions}/>
+          showOptions = {this.showOptions}
+
+          showTextInputPrice = {this.showTextInputPrice}
+          showInputPrice = {this.state.showInputPrice}/>
       </View>
     )
   }

@@ -1,15 +1,22 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity, TextInput} from 'react-native'
+import { StyleSheet, TouchableOpacity, TextInput} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Collapsible from 'react-native-collapsible'
+import {View, Text} from 'react-native-animatable'
 
-const Info = (props) => {
-  props.showInput = true
+const Info = props => {
 
-  if(props.showInput) {
-    showInput = <TextInput
-    style={{height: 40, borderColor: 'gray', borderWidth: 1}}/>
+  let priceInput = null
+
+  if(props.showInputPrice) {
+    priceInput = (<View animation="fadeInRight">
+      <TextInput style={styles.input} value={"introduce el precio"}></TextInput>
+      </View>)
+  } else {
+    priceInput = <Text animation="fadeInRight">12</Text>
   }
+
+  console.warn(props.showInputPrice)
 
   return (
     <View style={styles.content}>
@@ -17,16 +24,15 @@ const Info = (props) => {
       <View style={styles.generalContent}>
         <View style={styles.container}>
           
-          <TouchableOpacity style={styles.iconContent} onPress={props.showOptions}>
+          <TouchableOpacity style={styles.iconContent}>
             <Icon name={props.iconName} size={22} color="#ffffff"/>
           </TouchableOpacity>
 
-          <View>
-          <TextInput
-    style={{height: 40, borderColor: 'gray', borderWidth: 1}}/>
+          <View style={{width : 60, alignItems:'center'}}>
+            {priceInput}
           </View>
 
-          <TouchableOpacity onPress={props.showOptions}>
+          <TouchableOpacity onPress={props.showTextInputPrice}>
             <Icon name="md-add" size={22}/>
           </TouchableOpacity>
 
@@ -85,6 +91,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor : '#4285F4'
+  },
+
+  input : {
+    backgroundColor : 'white',
+    width : 60
   }
 })
 

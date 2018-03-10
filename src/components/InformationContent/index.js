@@ -11,7 +11,10 @@ const InfoBox = (props) => {
   return (
     <View style={styles.infoContainers}>
       <Collapsible collapsed={props.expand} duration={500} style={styles.collapsible}>
-        <InfoContent expand={props.expand}/>
+        <InfoContent 
+          expand={props.expand}
+          showTextInputPrice={props.showTextInputPrice} 
+          showInputPrice={props.showInputPrice}/>
       </Collapsible>      
     </View>
   )

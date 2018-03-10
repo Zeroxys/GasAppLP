@@ -9,7 +9,9 @@ import SuccessButton from '../UI/SuccessButton'
 
 const {width, height} = Dimensions.get('window')
 
-const InfoContent = (props) => {
+const InfoContent = props => {
+  
+
   return (
     <View style={styles.generalContent}>
       <View>
@@ -18,13 +20,17 @@ const InfoContent = (props) => {
           name="Kilos"
           iconName="ios-flame"
           showOptions = {props.showOptions}
-          messageInput="Introduce los Kilos"/>
+          messageInput="Introduce los Kilos"
+          showTextInputPrice={props.showTextInputPrice} 
+          showInputPrice={props.showInputPrice}/>
 
         <ProductButton
           name="Cantidad"
           iconName="md-flask"
           showOptions = {props.showOptions}
-          messageInput="Introduce el Monto"/>
+          messageInput="Introduce el Monto"
+          showTextInputPrice={props.showTextInputPrice} 
+          showInputPrice={props.showInputPrice}/>
 
         </View>
       <SuccessButton title={'Comprar'}/>

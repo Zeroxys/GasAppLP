@@ -11,6 +11,7 @@ import InfoContent from '../../components/InformationContent'
 const {width, height} = Dimensions.get('window')
 
 const MapContent = props => {
+
   return (
     <View style={styles.mapContent}>
       <MapView
@@ -20,7 +21,12 @@ const MapContent = props => {
         Ref = {props.Ref}/>
       <PriceBox/>
       <PositionButton OnPress={props.getCurrentPosition}/>
-      <ArrowButton expand={props.expand} OnPress={props.toggle} Icon={props.expand}/>
+      <ArrowButton 
+        expand={props.expand} 
+        OnPress={props.toggle} 
+        Icon={props.expand}
+        showTextInputPrice={props.showTextInputPrice} 
+        showInputPrice={props.showInputPrice}/>
     </View>)
 }
 

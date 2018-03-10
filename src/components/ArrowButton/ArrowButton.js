@@ -4,7 +4,8 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 import InfoContent from '../InformationContent'
 
-const ArrowButton = (props) => {
+const ArrowButton = props => {
+
   let arrowIcon = null
 
   if(props.Icon) {
@@ -15,7 +16,11 @@ const ArrowButton = (props) => {
 
   return (
     <View style={styles.container}>
-      <InfoContent expand={props.expand}/>
+      <InfoContent 
+        expand={props.expand}
+        showTextInputPrice={props.showTextInputPrice} 
+        showInputPrice={props.showInputPrice}/>
+
       <TouchableOpacity style={styles.expandButton} onPress={props.OnPress}>
         <Icon name={arrowIcon} size={25} style={{top : 5}}/>
       </TouchableOpacity>
